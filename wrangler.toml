@@ -7,3 +7,6 @@ keep_vars = true
 binding = "DB"
 database_name = "sua-renda-digital-db"
 database_id = "660c114b-e6b9-4a97-8af6-988551194f32"
+
+[secrets]
+required = ["RESEND_API_KEY"]
