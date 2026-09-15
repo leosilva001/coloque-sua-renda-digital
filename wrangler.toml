@@ -1,3 +1,4 @@
 name = "raspy-sky-3d90"
 main = "worker.js"
 compatibility_date = "2026-09-15"
+keep_vars = true
