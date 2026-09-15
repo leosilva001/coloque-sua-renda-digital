@@ -15,7 +15,16 @@ export default {
     const method = request.method.toUpperCase();
 
     if (url.pathname === "/health") {
-      return json({ ok: true, service: "sua-renda-no-digital", product_id: PRODUCT_ID });
+  return json({
+    ok: true,
+    service: "sua-renda-no-digital",
+    product_id: PRODUCT_ID,
+    diagnostics: {
+      db: !!env.DB,
+      from_email: !!env.FROM_EMAIL,
+      resend_api_key: !!env.RESEND_API_KEY
+    }
+  });
     }
 
     if (url.pathname === "/webhooks/kiwify" && method === "POST") {
