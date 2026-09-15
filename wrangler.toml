@@ -2,3 +2,8 @@ name = "raspy-sky-3d90"
 main = "worker.js"
 compatibility_date = "2026-09-15"
 keep_vars = true
+
+[[d1_databases]]
+binding = "DB"
+database_name = "sua-renda-digital-db"
+database_id = "660c114b-e6b9-4a97-8af6-988551194f32"
