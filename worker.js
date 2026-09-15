@@ -11,3 +11,4 @@ export default {
 };
 // Deploy via GitHub
 // primeiro build Cloudflare
+// build
