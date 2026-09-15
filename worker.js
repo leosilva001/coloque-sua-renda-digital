@@ -9,3 +9,4 @@ export default {
     return new Response("Sua Renda no Digital");
   }
 };
+// Deploy via GitHub
