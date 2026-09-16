@@ -2,91 +2,11 @@ const PRODUCT_ID = "2fffa400-b132-11f1-b958-cd4bca857c9f";
 const SESSION_DAYS = 30;
 const OTP_MINUTES = 10;
 
-const MODULES = [
-  {
-    id: 1,
-    title: "Vendendo produtos",
-    intro: "Entenda como escolher algo simples para vender e como testar se existe interesse antes de gastar muito.",
-    sections: [
-      ["1. Comece pelo problema", "Em vez de procurar qualquer produto, pense em algo que resolva uma necessidade clara ou facilite alguma tarefa."],
-      ["2. Escolha uma forma de venda", "Você pode vender pelas redes sociais, WhatsApp, marketplaces ou por uma página simples. O importante é ter uma oferta fácil de entender."],
-      ["3. Faça um teste pequeno", "Antes de investir mais, apresente a oferta para algumas pessoas e observe perguntas, cliques e pedidos de informação."],
-      ["4. Só aumente depois de validar", "Se houver interesse real, você pode melhorar a oferta e testar novos canais de divulgação." ]
-    ]
-  },
-  {
-    id: 2,
-    title: "Prestando serviços",
-    intro: "Serviços podem ser uma forma de começar sem precisar manter um estoque de produtos.",
-    sections: [
-      ["1. Pense no que você consegue entregar", "Pode ser algo presencial ou digital, desde que seja uma tarefa que você consiga executar com responsabilidade."],
-      ["2. Transforme a habilidade em oferta", "Explique o que você faz, para quem é, o que está incluído e como a pessoa pode solicitar o serviço."],
-      ["3. Monte um exemplo", "Um antes e depois, uma demonstração ou uma amostra ajuda o possível cliente a entender o resultado que você entrega."],
-      ["4. Procure os primeiros clientes", "Use contatos, redes sociais e indicações para apresentar o serviço e receber feedback." ]
-    ]
-  },
-  {
-    id: 3,
-    title: "Encontrando clientes",
-    intro: "Ter uma oferta é apenas uma parte. Você também precisa descobrir onde estão as pessoas que podem se interessar por ela.",
-    sections: [
-      ["1. Defina seu público", "Pense em quem realmente teria motivo para comprar ou contratar o que você oferece."],
-      ["2. Escolha um canal", "Instagram, TikTok, WhatsApp, grupos e contatos diretos são exemplos de canais. Comece com poucos para não se perder."],
-      ["3. Faça uma abordagem clara", "Apresente o que você oferece, mostre o benefício e deixe fácil para a pessoa responder ou pedir mais informações."],
-      ["4. Registre o que acontece", "Anote quantas pessoas responderam, quantas pediram detalhes e quais dúvidas apareceram. Isso ajuda a melhorar sua abordagem." ]
-    ]
-  },
-  {
-    id: 4,
-    title: "Indicações & parcerias",
-    intro: "Parcerias podem aproximar sua oferta de pessoas que já confiam em alguém ou em uma empresa.",
-    sections: [
-      ["1. Procure negócios complementares", "Um parceiro interessante é aquele que atende um público parecido, mas não concorre diretamente com você."],
-      ["2. Faça uma proposta simples", "Explique como a parceria pode funcionar e o que cada lado ganha. Evite prometer resultados que você não pode garantir."],
-      ["3. Combine as regras", "Defina como serão feitas as indicações, quais contatos serão encaminhados e, quando houver comissão, qual será o combinado."],
-      ["4. Acompanhe os resultados", "Veja quais parcerias realmente geram conversas e oportunidades e mantenha as que fazem sentido." ]
-    ]
-  },
-  {
-    id: 5,
-    title: "Vendendo pelo WhatsApp",
-    intro: "O WhatsApp pode funcionar como um canal simples para conversar com interessados e organizar pedidos.",
-    sections: [
-      ["1. Tenha uma oferta pronta", "Deixe claro o que está sendo vendido, o preço, o que está incluído e como funciona a entrega."],
-      ["2. Evite mensagens confusas", "Uma mensagem curta e personalizada costuma ser mais fácil de entender do que um texto enorme com várias informações."],
-      ["3. Responda as dúvidas", "Use as perguntas das pessoas para descobrir o que ainda está pouco claro na sua oferta."],
-      ["4. Facilite o próximo passo", "Quando houver interesse, explique de forma objetiva como a pessoa pode comprar, contratar ou agendar." ]
-    ]
-  },
-  {
-    id: 6,
-    title: "Criando sua oferta",
-    intro: "Uma boa oferta explica rapidamente o que você entrega e por que aquilo pode ser útil para a pessoa.",
-    sections: [
-      ["1. Diga o que é", "Comece pelo produto ou serviço, sem esconder a informação principal."],
-      ["2. Mostre para quem é", "Quanto mais claro for o público, mais fácil será criar uma comunicação específica."],
-      ["3. Explique o que está incluído", "Liste os principais itens, etapas ou benefícios que fazem parte da compra ou contratação."],
-      ["4. Crie um próximo passo", "Use uma chamada simples, como pedir informações, entrar em contato ou acessar o checkout." ]
-    ]
-  },
-  {
-    id: 7,
-    title: "Primeiro teste",
-    intro: "O objetivo do primeiro teste não é provar que você encontrou um negócio perfeito. É aprender com uma experiência pequena e real.",
-    sections: [
-      ["1. Escolha uma única ideia", "Evite testar várias coisas ao mesmo tempo. Escolha uma oferta que você consiga colocar em prática."],
-      ["2. Defina um limite", "Decida quanto tempo e dinheiro você aceita usar no teste antes de começar."],
-      ["3. Observe sinais reais", "Conversas, pedidos de orçamento, cliques e vendas são informações mais úteis do que apenas curtidas."],
-      ["4. Ajuste ou mude", "Se o teste não funcionar, descubra o que pode ser melhorado. Se não fizer sentido continuar, use o aprendizado na próxima tentativa." ]
-    ]
-  }
-];
-
 const HTML = {
   login: `<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Sua Renda no Digital</title><style>
   body{margin:0;background:#f5f1e8;color:#111;font-family:Arial,sans-serif}.wrap{max-width:520px;margin:0 auto;padding:48px 22px}.box{border:1px solid #cfc9bd;background:#f9f7f2;padding:28px;border-radius:18px}h1{font-size:30px;margin:0 0 10px}p{line-height:1.55;color:#444}input{width:100%;box-sizing:border-box;padding:15px;border:1px solid #aaa;border-radius:10px;background:#fff;font-size:16px;margin:8px 0 12px}button{width:100%;padding:15px;border:0;border-radius:10px;background:#111;color:#fff;font-weight:700;font-size:16px}small{display:block;margin-top:14px;color:#777}</style></head><body><main class="wrap"><div class="box"><div style="font-size:13px;font-weight:700;letter-spacing:.08em">SUA RENDA NO DIGITAL</div><h1>Área do aluno</h1><p>Digite o mesmo e-mail usado na compra. Enviaremos um código de acesso.</p><form method="post" action="/login"><input name="email" type="email" autocomplete="email" placeholder="seu@email.com" required><button>ENVIAR CÓDIGO</button></form><small>O acesso é liberado somente para compras aprovadas.</small></div></main></body></html>`,
-  otp: (email) => `<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Confirmar acesso</title><style>body{margin:0;background:#f5f1e8;color:#111;font-family:Arial,sans-serif}.wrap{max-width:520px;margin:0 auto;padding:48px 22px}.box{border:1px solid #cfc9bd;background:#f9f7f2;padding:28px;border-radius:18px}h1{font-size:28px}input{width:100%;box-sizing:border-box;padding:15px;border:1px solid #aaa;border-radius:10px;font-size:20px;letter-spacing:.3em;text-align:center}button{width:100%;margin-top:12px;padding:15px;border:0;border-radius:10px;background:#111;color:#fff;font-weight:700}</style></head><body><main class="wrap"><div class="box"><h1>Digite o código</h1><p>Enviamos um código de 6 dÃ­gitos para <b>${escapeHtml(email)}</b>.</p><form method="post" action="/verify"><input name="email" type="hidden" value="${escapeAttr(email)}"><input name="code" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" required><button>ENTRAR</button></form></div></main></body></html>`,
-  app: `<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Sua Renda no Digital</title><style>body{margin:0;background:#f5f1e8;color:#111;font-family:Arial,sans-serif}.wrap{max-width:720px;margin:0 auto;padding:40px 20px}.eyebrow{font-size:12px;font-weight:700;letter-spacing:.12em}h1{font-size:38px;line-height:1.05;margin:12px 0}p{line-height:1.6;color:#444}.card{background:#f9f7f2;border:1px solid #cfc9bd;border-radius:18px;padding:22px;margin:18px 0}.item{padding:17px 0;border-top:1px solid #111}.item:first-child{border-top:0}.num{font-size:12px;color:#777}a{color:#111;font-weight:700;text-decoration:none}.item{display:block}.item:hover{opacity:.7}form{margin-top:24px}button{padding:12px 18px;border:1px solid #111;background:#111;color:#fff;border-radius:9px}</style></head><body><main class="wrap"><div class="eyebrow">SUA RENDA NO DIGITAL</div><h1>Seu ponto de partida.</h1><p>Conteúdo prático para começar a entender caminhos de venda pela internet sem ficar perdido com tanta informação.</p><div class="card"><h2>O que você vai encontrar</h2><a class="item" href="/app/modulo/1"><span class="num">01</span><br>Vendendo produtos</a><a class="item" href="/app/modulo/2"><span class="num">02</span><br>Prestando serviços</a><a class="item" href="/app/modulo/3"><span class="num">03</span><br>Encontrando clientes</a><a class="item" href="/app/modulo/4"><span class="num">04</span><br>Indicações &amp; parcerias</a><a class="item" href="/app/modulo/5"><span class="num">05</span><br>Vendendo pelo WhatsApp</a><a class="item" href="/app/modulo/6"><span class="num">06</span><br>Criando sua oferta</a><a class="item" href="/app/modulo/7"><span class="num">07</span><br>Primeiro teste</a></div><form method="post" action="/logout"><button>SAIR</button></form></main></body></html>`
+  otp: (email) => `<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Confirmar acesso</title><style>body{margin:0;background:#f5f1e8;color:#111;font-family:Arial,sans-serif}.wrap{max-width:520px;margin:0 auto;padding:48px 22px}.box{border:1px solid #cfc9bd;background:#f9f7f2;padding:28px;border-radius:18px}h1{font-size:28px}input{width:100%;box-sizing:border-box;padding:15px;border:1px solid #aaa;border-radius:10px;font-size:20px;letter-spacing:.3em;text-align:center}button{width:100%;margin-top:12px;padding:15px;border:0;border-radius:10px;background:#111;color:#fff;font-weight:700}</style></head><body><main class="wrap"><div class="box"><h1>Digite o código</h1><p>Enviamos um código de 6 dígitos para <b>${escapeHtml(email)}</b>.</p><form method="post" action="/verify"><input name="email" type="hidden" value="${escapeAttr(email)}"><input name="code" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" required><button>ENTRAR</button></form></div></main></body></html>`,
+  app: `<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Sua Renda no Digital</title><style>body{margin:0;background:#f5f1e8;color:#111;font-family:Arial,sans-serif}.wrap{max-width:720px;margin:0 auto;padding:40px 20px}.eyebrow{font-size:12px;font-weight:700;letter-spacing:.12em}h1{font-size:38px;line-height:1.05;margin:12px 0}p{line-height:1.6;color:#444}.card{background:#f9f7f2;border:1px solid #cfc9bd;border-radius:18px;padding:22px;margin:18px 0}.item{padding:17px 0;border-top:1px solid #111}.item:first-child{border-top:0}.num{font-size:12px;color:#777}a{color:#111;font-weight:700;text-decoration:none}.item a:hover{text-decoration:underline}form{margin-top:24px}button{padding:12px 18px;border:1px solid #111;background:#111;color:#fff;border-radius:9px}</style></head><body><main class="wrap"><div class="eyebrow">SUA RENDA NO DIGITAL</div><h1>Seu ponto de partida.</h1><p>Conteúdo prático para começar a entender caminhos de venda pela internet sem ficar perdido com tanta informação.</p><div class="card"><h2>O que você vai encontrar</h2><div class="item"><span class="num">01</span><br><a href="/app/modulo/1">Vendendo produtos</a></div><div class="item"><span class="num">02</span><br><a href="/app/modulo/2">Prestando serviços</a></div><div class="item"><span class="num">03</span><br><a href="/app/modulo/3">Encontrando clientes</a></div><div class="item"><span class="num">04</span><br><a href="/app/modulo/4">Indicações & parcerias</a></div><div class="item"><span class="num">05</span><br><a href="/app/modulo/5">Vendendo pelo WhatsApp</a></div><div class="item"><span class="num">06</span><br><a href="/app/modulo/6">Criando sua oferta</a></div><div class="item"><span class="num">07</span><br><a href="/app/modulo/7">Primeiro teste</a></div></div><form method="post" action="/logout"><button>SAIR</button></form></main></body></html>`
 };
 
 export default {
@@ -130,12 +50,8 @@ export default {
     if (url.pathname.startsWith("/app/modulo/")) {
       const session = await getSession(request, env);
       if (!session) return redirect("/login");
-
       const id = Number(url.pathname.split("/").pop());
-      if (!Number.isInteger(id) || id < 1 || id > MODULES.length) {
-        return new Response("Not found", { status: 404 });
-      }
-
+      if (!Number.isInteger(id) || id < 1 || id > MODULES.length) return new Response("Not found", { status: 404 });
       return html(modulePage(MODULES[id - 1]));
     }
 
@@ -153,16 +69,57 @@ export default {
   }
 };
 
-function modulePage(module) {
-  const sections = module.sections.map(([title, text]) => `
-    <section class="section">
-      <h2>${escapeHtml(title)}</h2>
-      <p>${escapeHtml(text)}</p>
-    </section>
-  `).join("");
 
-  return `<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escapeHtml(module.title)} — Sua Renda no Digital</title><style>
-  body{margin:0;background:#f5f1e8;color:#111;font-family:Arial,sans-serif}.wrap{max-width:720px;margin:0 auto;padding:40px 20px}.eyebrow{font-size:12px;font-weight:700;letter-spacing:.12em}h1{font-size:38px;line-height:1.05;margin:12px 0}p{line-height:1.65;color:#444}.card{background:#f9f7f2;border:1px solid #cfc9bd;border-radius:18px;padding:22px;margin:18px 0}.section{padding:18px 0;border-top:1px solid #111}.section:first-child{border-top:0}.section h2{font-size:19px;margin:0 0 8px}.back{display:inline-block;margin-bottom:18px;color:#111;font-weight:700;text-decoration:none}.nav{display:flex;justify-content:space-between;gap:12px;margin-top:22px}.nav a{color:#111;font-weight:700;text-decoration:none;border:1px solid #111;border-radius:9px;padding:11px 14px;background:#f9f7f2}.nav a:last-child{margin-left:auto}form{margin-top:24px}button{padding:12px 18px;border:1px solid #111;background:#111;color:#fff;border-radius:9px}</style></head><body><main class="wrap"><div class="eyebrow">SUA RENDA NO DIGITAL</div><a class="back" href="/app">← Voltar para os módulos</a><h1>${escapeHtml(module.title)}</h1><p>${escapeHtml(module.intro)}</p><div class="card">${sections}</div><div class="nav">${module.id > 1 ? `<a href="/app/modulo/${module.id - 1}">← Anterior</a>` : `<span></span>`}${module.id < MODULES.length ? `<a href="/app/modulo/${module.id + 1}">Próximo →</a>` : `<a href="/app">Concluir</a>`}</div><form method="post" action="/logout"><button>SAIR</button></form></main></body></html>`;
+const MODULES = [
+  {id:1,title:"Vendendo produtos",intro:"Entenda como escolher algo simples para vender e fazer um primeiro teste.",sections:[
+    ["1. Comece pelo problema","Pense primeiro em qual problema ou necessidade você consegue atender."],
+    ["2. Escolha uma forma de venda","Você pode vender por redes sociais, WhatsApp, marketplaces ou uma página própria."],
+    ["3. Faça um teste pequeno","Antes de investir mais, coloque sua oferta na frente de algumas pessoas e observe o interesse."],
+    ["4. Só aumente depois de validar","Use o que aprendeu para melhorar a oferta e testar novamente."]
+  ]},
+  {id:2,title:"Prestando serviços",intro:"Serviços podem ser uma forma de começar usando uma habilidade que você já possui.",sections:[
+    ["1. Pense no que você consegue entregar","Liste tarefas que você sabe fazer ou consegue aprender rapidamente."],
+    ["2. Transforme a habilidade em oferta","Deixe claro qual serviço você presta, para quem e o que a pessoa recebe."],
+    ["3. Monte um exemplo","Um exemplo simples ajuda o possível cliente a entender o que você oferece."],
+    ["4. Procure os primeiros interessados","Comece por contatos e negócios que realmente possam ter necessidade do serviço."]
+  ]},
+  {id:3,title:"Encontrando clientes",intro:"Depois de definir sua oferta, encontre pessoas que possam ter interesse.",sections:[
+    ["1. Defina seu público","Tenha uma ideia clara de quem pode se beneficiar do que você oferece."],
+    ["2. Encontre onde essas pessoas estão","Redes sociais, grupos, contatos e negócios locais podem ser pontos de partida."],
+    ["3. Faça uma abordagem simples","Explique rapidamente o que você oferece e por que entrou em contato."],
+    ["4. Aprenda com as respostas","As respostas ajudam a descobrir o que precisa ser ajustado."]
+  ]},
+  {id:4,title:"Indicações & parcerias",intro:"Parcerias e indicações podem ajudar você a chegar a pessoas novas.",sections:[
+    ["1. Procure parceiros complementares","Busque pessoas ou negócios que atendam um público parecido, mas ofereçam algo diferente."],
+    ["2. Apresente uma proposta clara","Explique como a parceria pode funcionar e o que cada lado fará."],
+    ["3. Combine as condições","Defina de forma clara como serão feitas as indicações e eventuais comissões."],
+    ["4. Acompanhe os resultados","Veja quais parcerias realmente geram contatos e vendas."]
+  ]},
+  {id:5,title:"Vendendo pelo WhatsApp",intro:"Use o WhatsApp para conversar com interessados e apresentar uma oferta.",sections:[
+    ["1. Comece a conversa","Use uma mensagem curta e respeitosa."],
+    ["2. Entenda a necessidade","Faça perguntas simples para saber se sua oferta faz sentido."],
+    ["3. Apresente a oferta","Mostre o que está sendo vendido, o preço e as condições de forma clara."],
+    ["4. Faça o acompanhamento","Se houver interesse, combine um próximo passo em vez de insistir repetidamente."]
+  ]},
+  {id:6,title:"Criando sua oferta",intro:"Uma boa oferta deixa claro o que está sendo vendido, para quem é e qual é o próximo passo.",sections:[
+    ["1. Defina o produto ou serviço","Explique exatamente o que a pessoa está comprando."],
+    ["2. Mostre o principal benefício","Fale sobre o problema que a oferta ajuda a resolver, sem prometer resultados garantidos."],
+    ["3. Deixe preço e condições claros","Evite esconder informações importantes."],
+    ["4. Termine com uma ação","Diga de forma simples o que a pessoa deve fazer para continuar."]
+  ]},
+  {id:7,title:"Primeiro teste",intro:"O primeiro teste serve para descobrir se existe interesse real antes de aumentar o investimento.",sections:[
+    ["1. Escolha uma oferta","Teste uma ideia por vez para conseguir entender o que funcionou."],
+    ["2. Defina um pequeno período","Observe os primeiros sinais sem transformar o teste em um compromisso grande."],
+    ["3. Observe os números","Acessos, mensagens, interessados e vendas ajudam a entender o comportamento da oferta."],
+    ["4. Ajuste e teste novamente","Use o que aprendeu para mudar uma parte da oferta e comparar o resultado."]
+  ]}
+];
+
+function modulePage(module) {
+  const sections = module.sections.map((s,i)=>`<div class="module-section"><div class="module-number">${String(i+1).padStart(2,"0")}</div><div><h2>${escapeHtml(s[0])}</h2><p>${escapeHtml(s[1])}</p></div></div>`).join("");
+  const previous = module.id > 1 ? `<a class="module-nav" href="/app/modulo/${module.id-1}">← Módulo anterior</a>` : `<a class="module-nav" href="/app">← Voltar aos módulos</a>`;
+  const next = module.id < MODULES.length ? `<a class="module-nav" href="/app/modulo/${module.id+1}">Próximo módulo →</a>` : `<a class="module-nav" href="/app">Voltar aos módulos →</a>`;
+  return `<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escapeHtml(module.title)} - Sua Renda no Digital</title><style>body{margin:0;background:#f5f1e8;color:#111;font-family:Arial,sans-serif}.wrap{max-width:720px;margin:0 auto;padding:40px 20px}.eyebrow{font-size:12px;font-weight:700;letter-spacing:.12em}.back{display:inline-block;margin-bottom:28px;color:#111;text-decoration:none;font-weight:700}h1{font-size:38px;line-height:1.05;margin:12px 0}p{line-height:1.6;color:#444}.intro{font-size:18px;margin-bottom:28px}.card{background:#f9f7f2;border:1px solid #cfc9bd;border-radius:18px;padding:22px;margin:18px 0}.module-section{display:flex;gap:16px;padding:20px 0;border-top:1px solid #111}.module-section:first-child{border-top:0}.module-number{font-size:12px;color:#777;min-width:28px}.module-section h2{font-size:19px;margin:0 0 8px}.module-section p{margin:0}.module-navs{display:flex;justify-content:space-between;gap:20px;margin-top:28px}.module-nav{color:#111;font-weight:700;text-decoration:none}.module-nav:hover{text-decoration:underline}@media(max-width:520px){h1{font-size:32px}.module-navs{flex-direction:column}}</style></head><body><main class="wrap"><a class="back" href="/app">← Sua Renda no Digital</a><div class="eyebrow">MÓDULO ${String(module.id).padStart(2,"0")}</div><h1>${escapeHtml(module.title)}</h1><p class="intro">${escapeHtml(module.intro)}</p><div class="card">${sections}</div><div class="module-navs">${previous}${next}</div></main></body></html>`;
 }
 
 async function handleKiwifyWebhook(request, env) {
@@ -215,7 +172,7 @@ async function requestLogin(request, env) {
 
   // Generic response prevents account enumeration.
   if (!buyer) {
-    return html("<!doctype html><meta charset='utf-8'><body style='font-family:Arial;padding:40px;background:#f5f1e8'><h2>Verifique seu e-mail</h2><p>Se houver uma compra aprovada vinculada a esse endereço, você receberÃ¡ um código.</p><a href='/login'>Voltar</a></body>");
+    return html("<!doctype html><meta charset='utf-8'><body style='font-family:Arial;padding:40px;background:#f5f1e8'><h2>Verifique seu e-mail</h2><p>Se houver uma compra aprovada vinculada a esse endereço, você receberá um código.</p><a href='/login'>Voltar</a></body>");
   }
 
   const code = String(Math.floor(100000 + Math.random() * 900000));
@@ -327,7 +284,7 @@ async function sendEmail(env, email, code) {
       from: env.FROM_EMAIL,
       to: [email],
       subject: "Seu código de acesso — Sua Renda no Digital",
-      text: `Seu código de acesso Ã©: ${code}\n\nEle expira em ${OTP_MINUTES} minutos.`
+      text: `Seu código de acesso é: ${code}\n\nEle expira em ${OTP_MINUTES} minutos.`
     })
   });
   return { ok: response.ok };
@@ -340,4 +297,38 @@ function normalizeEmail(value) {
 function randomToken() {
   const bytes = new Uint8Array(32);
   crypto.getRandomValues(bytes);
-  return [...bytes].map(b => b.toString(16).pad
+  return [...bytes].map(b => b.toString(16).padStart(2, "0")).join("");
+}
+
+async function sha256(value) {
+  const data = new TextEncoder().encode(value);
+  const digest = await crypto.subtle.digest("SHA-256", data);
+  return [...new Uint8Array(digest)].map(b => b.toString(16).padStart(2, "0")).join("");
+}
+
+function timingSafeEqual(a, b) {
+  if (a.length !== b.length) return false;
+  let result = 0;
+  for (let i = 0; i < a.length; i++) result |= a.charCodeAt(i) ^ b.charCodeAt(i);
+  return result === 0;
+}
+
+function html(body, status = 200) {
+  return new Response(body, { status, headers: { "content-type": "text/html; charset=utf-8" } });
+}
+
+function json(data, status = 200) {
+  return new Response(JSON.stringify(data), {
+    status,
+    headers: { "content-type": "application/json; charset=utf-8" }
+  });
+}
+
+function redirect(location) {
+  return new Response(null, { status: 302, headers: { Location: location } });
+}
+
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, c => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#039;" }[c]));
+}
+function 
